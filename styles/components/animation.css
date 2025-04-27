@@ -89,6 +89,16 @@
     transform: translate(-1.5rem, -3rem);
   }
 }
+@keyframes growVanish {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(5);
+  }
+}
 
 .fadeInTop {
   animation: fadeInTop 0.5s linear forwards;

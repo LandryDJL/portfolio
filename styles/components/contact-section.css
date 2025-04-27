@@ -31,7 +31,7 @@
 }
 .block-info .info-row.social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 2rem;
   /* margin: 1rem; */
 }

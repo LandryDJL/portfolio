@@ -77,20 +77,24 @@
 .block-info-hero .block-btn a:hover svg {
   fill: var(--primary-clr);
 }
-.block-info-hero .block-btn .contact-btn {
-  opacity: 0.8;
+.block-info-hero .block-btn .outline-contact-btn {
+  background-color: transparent;
+  border: 2px solid var(--accent-clr);
+  padding: 0.2rem;
+}
+.block-info-hero .block-btn .outline-contact-btn:hover {
+  animation: gorwVanish 1s linear forwards;
+}
+.block-info-hero .block-btn .outline-contact-btn .contact-btn {
   background-color: var(--accent-clr);
   color: var(--primary-clr);
   gap: 0.5rem;
 }
-.block-info-hero .block-btn .contact-btn:hover {
-  opacity: 1;
-  scale: 1.05;
-  color: var(--text-clr);
-}
-.block-info-hero .block-btn .contact-btn:hover svg {
+/* .block-info-hero .block-btn .contact-btn:hover {
+} */
+/* .block-info-hero .block-btn .contact-btn:hover svg {
   fill: var(--text-clr);
-}
+} */
 .block-info-hero .block-btn .contact-btn svg {
   fill: var(--primary-clr);
 }

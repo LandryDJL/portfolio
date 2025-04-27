@@ -82,6 +82,9 @@ svg {
   fill: var(--text-clr);
   transition: 0.3s ease-in-out;
 }
+input::caret {
+  color: var(--accent-clr);
+}
 
 /* Screens */
 @media (max-width: 800px) {
