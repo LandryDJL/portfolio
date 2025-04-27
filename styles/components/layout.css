@@ -1,0 +1,68 @@
+/* ============================== header ==============================  */
+header {
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+  background-color: #fbf5df;
+}
+
+/* ============================== main ==============================  */
+.line {
+  width: 100px;
+  height: 3px;
+  background-color: var(--accent-clr);
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.second-line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-clr);
+  margin-bottom: 3rem;
+}
+.goTop {
+  opacity: 0.7;
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  border: none;
+  background-color: var(--primary-clr);
+  border: 1px solid var(--accent-clr);
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  transition: 0.3s ease-in-out;
+  z-index: 10;
+}
+.goTop:hover {
+  background-color: transparent;
+  animation: bouncing 1s ease-in-out infinite;
+}
+/* ============================== footer ==============================  */
+footer {
+  background-color: var(--secondary-clr);
+  grid-area: 2/1/3/3;
+  z-index: 3;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--accent-clr);
+}
+
+@media (max-width: 800px) {
+  body {
+    display: block;
+  }
+  .section {
+    padding: 0;
+  }
+  header {
+    height: 0;
+    width: 100dvw;
+    position: relative;
+    top: 0;
+    background-color: var(--primary-clr);
+  }
+}

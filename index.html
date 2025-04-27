@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components/form.css" />
+    <link rel="stylesheet" href="styles/components/layout.css" />
+    <link rel="stylesheet" href="styles/components/hero-section.css" />
+    <link rel="stylesheet" href="styles/components/projects-section.css" />
+    <link rel="stylesheet" href="styles/components/skills-section.css" />
+    <link rel="stylesheet" href="styles/components/contact-section.css" />
+    <link rel="stylesheet" href="styles/components/navigation.css" />
+    <link rel="stylesheet" href="styles/components/animation.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="scripts/main.js" defer></script>
+    <title>Portfolio - Eng</title>
+  </head>
+  <body>
+    <header>
+      <nav id="topbar">
+        <button onclick="hamToggle()" class="hamburger-toggler">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffbb00"
+          >
+            <path
+              d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z"
+            />
+          </svg>
+        </button>
+        <div class="top-profileset">
+          <div class="profile-pic-topbar">
+            <a href="index.html"
+              ><img src="assets/images/DJL_.jpg" alt="Profile picture"
+            /></a>
+          </div>
+          <div class="name-topbar">Landry Dally</div>
+          <div class="social-links">
+            <a
+              href="https://github.com/LandryDJL"
+              target="_blank"
+              title="GitHub"
+            >
+              <img src="assets/images/gitHubDark.svg" alt="gitHub"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/landry-dally"
+              target="_blank"
+              title="LinkedIn"
+              ><img src="assets/images/linkedInDark.svg" alt="linkedIn"
+            /></a>
+            <a
+              href="https://wa.me/+2250707075539?text=urlencodedtext"
+              target="_blank"
+              title="WhatsApp"
+              ><img src="assets/images/whaDark.svg" alt="Whatsapp"
+            /></a>
+          </div>
+        </div>
+        <div class="block-settings">
+          <button onclick="settingsToggler()" class="settings-toggler">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#1a1a1a"
+            >
+              <path
+                d="m234-480-12-60q-12-5-22.5-10.5T178-564l-58 18-40-68 46-40q-2-13-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T222-820l12-60h80l12 60q12 5 22.5 10.5T370-796l58-18 40 68-46 40q2 13 2 26t-2 26l46 40-40 68-58-18q-11 8-21.5 13.5T326-540l-12 60h-80Zm40-120q33 0 56.5-23.5T354-680q0-33-23.5-56.5T274-760q-33 0-56.5 23.5T194-680q0 33 23.5 56.5T274-600ZM592-40l-18-84q-17-6-31.5-14.5T514-158l-80 26-56-96 64-56q-2-18-2-36t2-36l-64-56 56-96 80 26q14-11 28.5-19.5T574-516l18-84h112l18 84q17 6 31.5 14.5T782-482l80-26 56 96-64 56q2 18 2 36t-2 36l64 56-56 96-80-26q-14 11-28.5 19.5T722-124l-18 84H592Zm56-160q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
+              />
+            </svg>
+          </button>
+          <div class="block-settings-content">
+            <a href="index-fr.html" class="lang-btn"><strong>FR</strong></a>
+            <button onclick="activateDarkMode()" class="theme-btn">
+              <svg
+                class="moon-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#e3e3e3">
+                  <path d="M484-80q-84 0-157.5-32t-128-86.5Q144-253 112-326.5T80-484q0-146 93-257.5T410-880q-18 99 11 193.5T521-521q71 71 165.5 100T880-410q-26 144-138 237T484-80Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T464-465q-61-61-97-138t-43-163q-77 43-120.5 118.5T160-484q0 135 94.5 229.5T484-160Zm-20-305Z"/>
+              </svg>
+              <svg
+                class="sun-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#ffbb00"
+              >
+                <path
+                  d="M440-800v-120h80v120h-80Zm0 760v-120h80v120h-80Zm360-400v-80h120v80H800Zm-760 0v-80h120v80H40Zm708-252-56-56 70-72 58 58-72 70ZM198-140l-58-58 72-70 56 56-70 72Zm564 0-70-72 56-56 72 70-58 58ZM212-692l-72-70 58-58 70 72-56 56Zm268 452q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q67 0 113.5-46.5T640-480q0-67-46.5-113.5T480-640q-67 0-113.5 46.5T320-480q0 67 46.5 113.5T480-320Zm0-160Z"
+                />
+              </svg>
+            </button>
+            <button onclick="activateGoldTheme()" class="gold-toggle-btn"></button>
+            <button onclick="activateBlueTheme()" class="blue-toggle-btn"></button>
+          </div>
+        </div>
+      </nav>
+      <nav id="sidebar">
+        <div class="profileset">
+          <div class="profile-pic-sidebar">
+            <a href="index.html"
+              ><img src="assets/images/DJL_.jpg" alt="Profile picture"
+            /></a>
+          </div>
+          <div class="name-sidebar">Landry Dally</div>
+          <div class="social-links">
+            <a
+              href="https://github.com/LandryDJL"
+              target="_blank"
+              title="GitHub"
+            >
+              <img src="assets/images/gitHubDark.svg" alt="gitHub"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/landry-dally"
+              target="_blank"
+              title="LinkedIn"
+              ><img src="assets/images/linkedInDark.svg" alt="linkedIn"
+            /></a>
+            <a
+              href="https://wa.me/+2250707075539?text=urlencodedtext"
+              target="_blank"
+              title="WhatsApp"
+              ><img src="assets/images/whaDark.svg" alt="Whatsapp"
+            /></a>
+          </div>
+        </div>
+        <div id="menu-sidebar">
+          <a href="#hero" class="home active">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#1a1a1a"
+            >
+              <path
+                d="M180-120q-25 0-42.5-17.5T120-180v-76l160-142v278H180Zm140 0v-160h320v160H320Zm360 0v-328L509-600l121-107 190 169q10 9 15 20.5t5 24.5v313q0 25-17.5 42.5T780-120H680ZM120-310v-183q0-13 5-25t15-20l300-266q8-8 18.5-11.5T480-819q11 0 21.5 3.5T520-804l80 71-480 423Z"
+              />
+            </svg>
+            <div>Home</div>
+          </a>
+          <a href="#projects" class="projects">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#1a1a1a"
+            >
+              <path
+                d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z"
+              />
+            </svg>
+            <div>Projects</div>
+          </a>
+          <a href="#skills" class="skills">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#1a1a1a"
+            >
+              <path
+                d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"
+              />
+            </svg>
+            <div>My Skills</div>
+          </a>
+          <a href="#contact" class="contact">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#1a1a1a"
+            >
+              <path
+                d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z"
+              />
+            </svg>
+            <div>Contact Me</div>
+          </a>
+        </div>
+        <button onclick="clodeSidebar()" class="close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#ffbb00"
+          >
+            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <h1 class="section-title">HERO</h1>
+        <div class="hero-container">
+          <div class="block-hero-img">
+            <img src="assets/images/DJL_.jpg" alt="Hero image hover" />
+            <div class="outlined"></div>
+          </div>
+          <div class="block-info-hero">
+            <div class="block-name">
+              <h1>Landry Dally</h1>
+            </div>
+            <div class="block-profession">
+              <em>Web Developer</em> | <em>Web Designer</em> |
+              <em>Graphic Designer</em>
+            </div>
+            <div class="block-description">
+              Aspirant Frontend developer and Web designer, bilingual(English,
+              French), with a passion for creating visually stunning digital
+              experiences. With solid background in Graphic Design and UI
+              Designs. Excels at crafting intuitive and engaging web interfaces.
+              Proficient in
+              <em><strong>HTML, CSS, JavaScript, React </strong></em>and design
+              tools like
+              <em
+                ><strong
+                  >Adobe photoshop, Adobe Illustrator and Canva.</strong
+                ></em
+              >
+            </div>
+            <div class="block-btn">
+              <a class="resume-eng" href="#">
+                <span class="title-btn">English Resume</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#ffbb00"
+                >
+                  <path
+                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                  />
+                </svg>
+              </a>
+              <a class="resume-fr" href="#">
+                <span class="title-btn">French Resume</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#ffbb00"
+                >
+                  <path
+                    d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                  />
+                </svg>
+              </a>
+              <a class="contact-btn" href="#contact">
+                <span class="title-btn">CONTACT ME</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill=""
+                >
+                  <path
+                    d="M880-80 720-240H320q-33 0-56.5-23.5T240-320v-40h440q33 0 56.5-23.5T760-440v-280h40q33 0 56.5 23.5T880-640v560ZM160-473l47-47h393v-280H160v327ZM80-280v-520q0-33 23.5-56.5T160-880h440q33 0 56.5 23.5T680-800v280q0 33-23.5 56.5T600-440H240L80-280Zm80-240v-280 280Z"
+                  />
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <h1 class="section-title">PROJECTS</h1>
+        <div class="line"></div>
+        <div class="second-line"></div>
+        <div class="projects-container">
+          <div class="details block">
+            <p>
+              Here are the projects that I've been working on for myself, school
+              and friends.
+            </p>
+          </div>
+          <div class="filters block">
+            <div class="dropdown">
+              <div class="categories-selector">
+                <select name="selector" id="selector">
+                  <option value="0">All Projects</option>
+                  <option value="1">Graphic Design Projects</option>
+                  <option value="2">Web Development Projects</option>
+                </select>
+              </div>
+            </div>
+            <div class="categories">
+              <label for="school"
+                ><input type="checkbox" id="school" /> School</label
+              >
+              <label for="self"
+                ><input type="checkbox" id="self" /> Personal</label
+              >
+              <label for="friends"
+                ><input type="checkbox" id="friends" /> Friends</label
+              >
+            </div>
+          </div>
+          <div class="projects-grid block">
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+            <a href="#" class="project-card">
+              <img src="" alt="" />
+              <div class="title-project"></div>
+              <div class="description-project"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h1 class="section-title">MY SKILLS</h1>
+        <div class="line"></div>
+        <div class="second-line"></div>
+        <div class="skills-container">
+          <div class="WB-container">
+            <div class="skill-title"><h3>Web Development / Web Design</h3></div>
+            <div class="skill-block">
+              <div class="WB skill">
+                <img src="assets/images/html-5.svg" alt="Html icon" />
+                <span class="skill-name">Html 5</span>
+                <span class="bar"><span class="html-filler">90%</span></span>
+              </div>
+              <div class="WB skill">
+                <img src="assets/images/css-3.svg" alt="CSS icon" />
+                <span class="skill-name">CSS 3</span>
+                <span class="bar"><span class="css-filler">80%</span></span>
+              </div>
+              <div class="WB skill">
+                <img src="assets/images/bootstrap.svg" alt="Bootstrap icon" />
+                <span class="skill-name">Bootstrap</span>
+                <span class="bar"
+                  ><span class="bootstrap-filler">90%</span></span
+                >
+              </div>
+              <div class="WB skill">
+                <img src="assets/images/javascript.svg" alt="JS icon" />
+                <span class="skill-name">JavaScript</span>
+                <span class="bar"><span class="js-filler">80%</span></span>
+              </div>
+              <div class="WB skill">
+                <img src="assets/images/react.svg" alt="React icon" />
+                <span class="skill-name">React</span>
+                <span class="bar"><span class="react-filler">70%</span></span>
+              </div>
+              <div class="WB skill">
+                <img src="assets/images/wordpress.svg" alt="Wordpress icon" />
+                <span class="skill-name">Wordpress</span>
+                <span class="bar"
+                  ><span class="wordpress-filler">90%</span></span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="GD-container">
+            <div class="skill-title"><h3>Graphic Design</h3></div>
+            <div class="skill-block">
+              <div class="GD skill">
+                <img
+                  src="assets/images/illustrator.svg"
+                  alt="Illustrator icon"
+                />
+                <span class="skill-name">Adobe Illustrator</span>
+                <span class="bar"
+                  ><span class="illustrator-filler">80%</span></span
+                >
+              </div>
+              <div class="GD skill">
+                <img src="assets/images/photoshop.svg" alt="Photoshop icon" />
+                <span class="skill-name">Adobe Photoshop</span>
+                <span class="bar"
+                  ><span class="photoshop-filler">70%</span></span
+                >
+              </div>
+              <div class="GD skill">
+                <img src="assets/images/canvaBlue.svg" alt="Canva icon" />
+                <span class="skill-name">Canva</span>
+                <span class="bar"><span class="canva-filler">90%</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h1 class="section-title">CONTACT ME</h1>
+        <div class="line"></div>
+        <div class="second-line"></div>
+        <div class="contact-container">
+          <p>Getting in touch is <span class="easy">Easy</span> !</p>
+          <div class="block-info">
+            <div class="info-row adress">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1a1a1a"
+              >
+                <path
+                  d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
+                />
+              </svg>
+              <p>Abidjan, Cote d'Ivoire</p>
+            </div>
+            <div class="info-row number">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1a1a1a"
+              >
+                <path
+                  d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"
+                />
+              </svg>
+              <p>+225 0707075539</p>
+            </div>
+            <div class="info-row email">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#1a1a1a"
+              >
+                <path
+                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
+                />
+              </svg>
+              <p>landrydallydjl@gmail.com</p>
+            </div>
+            <div class="info-row social-links">
+              <a
+                href="https://github.com/LandryDJL"
+                target="_blank"
+                title="GitHub"
+              >
+                <img src="assets/images/gitHubDark.svg" alt="gitHub"
+              /></a>
+              <a
+                href="https://www.linkedin.com/in/landry-dally"
+                target="_blank"
+                title="LinkedIn"
+                ><img src="assets/images/linkedInDark.svg" alt="linkedIn"
+              /></a>
+              <a
+                href="https://wa.me/+2250707075539?text=urlencodedtext"
+                target="_blank"
+                title="WhatsApp"
+                ><img src="assets/images/whaDark.svg" alt="Whatsapp"
+              /></a>
+            </div>
+            <div class=" info-row block-map"></div>
+          </div>
+          <div class="block-form">
+            <form action="#">
+              <p>Message me!</p>
+              <div class="row">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="row">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" />
+              </div>
+              <div class="row">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                <span class="text-btn">Send your message</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#1a1a1a"
+                >
+                  <path
+                    d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <button onclick="scrollTop()" class="goTop">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg>
+      </button>
+    </main>
+    <footer>
+      <p>&#64<span class="year"> </span> Landry Dally</p>
+      <p>All right reserved</p>
+    </footer>
+  </body>
+</html>
