@@ -142,11 +142,11 @@ function activateDarkMode() {
   sun.classList.toggle("showed");
   moon.classList.toggle("showed");
   body.classList.toggle("dark-mode");
-  localStorage.setItem("theme", body.classList.contains("dark-mode"));
+  localStorage.setItem("darkTheme", body.classList.contains("dark-mode"));
 }
 document.addEventListener("DOMContentLoaded", () => {
-  const theme = localStorage.getItem("theme");
-  if (theme === "true") {
+  const darkTheme = localStorage.getItem("darkTheme");
+  if (darkTheme === "true") {
     body.classList.add("dark-mode");
     sun.classList.add("showed");
   } else {
@@ -158,14 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
 // Blue and gold theme
 document.addEventListener("DOMContentLoaded", () => {
   body.classList.add("gold-theme");
-  const theme = localStorage.getItem("themeColor");
-  if (theme === "") {
-    localStorage.setItem("theme", "gold-theme");
+  const themeColor = localStorage.getItem("themeColor");
+  if (themeColor === "") {
+    localStorage.setItem("themeColor", "gold-theme");
   }
-  if (theme === "gold-theme") {
+  if (themeColor === "gold-theme") {
     body.classList.add("gold-theme");
   }
-  if (theme === "blue-theme") {
+  if (themeColor === "blue-theme") {
     body.classList.add("blue-theme");
   }
 });
