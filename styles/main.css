@@ -85,7 +85,19 @@ svg {
 input::caret {
   color: var(--accent-clr);
 }
-
+/* .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+} */
+.social-links a svg {
+  transition: 0.3s ease-in-out;
+  width: 2.5rem;
+}
+.social-links a:hover svg {
+  scale: 1.1;
+  fill: var(--accent-clr);
+}
 /* Screens */
 @media (max-width: 800px) {
   body {

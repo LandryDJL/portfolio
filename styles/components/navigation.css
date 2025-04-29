@@ -141,24 +141,6 @@
   width: 70px;
   border: 2px solid var(--accent-clr);
 }
-.social-links img {
-  width: 1.5rem;
-}
-.profileset .social-links a {
-  transition: 0.3s ease-in-out;
-  margin: 0.3rem;
-}
-.profileset .social-links a:hover {
-  scale: 1.2;
-}
-.profileset .name-sidebar {
-  font-weight: bold;
-}
-.profileset .social-links {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
 #menu-sidebar a {
   padding: 0.7rem;
   transition: 0.3s ease-in-out;
@@ -170,9 +152,6 @@
   color: var(--accent-clr);
   border-left: 1rem solid var(--accent-clr);
 }
-/* #menu-sidebar a:hover span {
-  color: var(--accent-clr);
-} */
 #menu-sidebar a svg {
   margin-right: 1rem;
 }

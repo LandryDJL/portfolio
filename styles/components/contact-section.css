@@ -29,19 +29,6 @@
   margin-bottom: 1rem;
   width: auto;
 }
-.block-info .info-row.social-links {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  /* margin: 1rem; */
-}
-.block-info .info-row.social-links a img {
-  transition: 0.3s ease-in-out;
-  width: 2.5rem;
-}
-.block-info .social-links a:hover img {
-  scale: 1.1;
-}
 .block-info .block-map {
   height: 44%;
 }
@@ -78,6 +65,9 @@
     justify-content: left;
     width: 70%;
     margin: 0.5rem auto;
+  }
+  .block-info .info-row.social-links {
+    justify-content: center;
   }
   .block-info .block-map {
     height: auto;
