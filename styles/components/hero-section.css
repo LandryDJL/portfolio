@@ -88,11 +88,11 @@
   gap: 0.5rem;
 }
 .block-info-hero .block-btn .contact-btn:hover {
-  color: var(--text-clr);
-  font-weight: 800;
+  color: #f3f3f3;
+  box-shadow: 0px 0px 15px var(--accent-clr);
 }
 .block-info-hero .block-btn .contact-btn:hover svg {
-  fill: var(--text-clr);
+  fill: #f3f3f3;
 }
 .block-info-hero .block-btn .contact-btn svg {
   fill: var(--primary-clr);

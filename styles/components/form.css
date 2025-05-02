@@ -27,6 +27,7 @@
   font-family: var(--default-font);
   font-size: 1.1rem;
   background-color: var(--primary-clr);
+  color: var(--text-clr);
 }
 .block-form form input:focus,
 .block-form form textarea:focus {
@@ -45,10 +46,10 @@
   gap: 1rem;
 }
 .submit-btn:hover {
-  color: var(--text-clr);
+  color: #f3f3f3;
 }
 .submit-btn:hover svg {
-  fill: var(--text-clr);
+  fill: #f3f3f3;
 }
 .submit-btn:active {
   transform: translateY(0.2rem);
@@ -97,7 +98,7 @@
   }
   .block-form form .row,
   .block-form form button {
-    width: 80%;
+    width: 72dvw;
     margin: 0 auto;
   }
   .block-form form:hover {

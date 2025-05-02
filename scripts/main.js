@@ -3,13 +3,11 @@ const currentYear = new Date().getFullYear();
 const year = document.querySelector(".year");
 year.textContent = currentYear;
 
-//Link the sidebar links to the section and highlight the link of the corresponding section showing and  Animate the elements of the page.
+// Animate elements of the page on scroll
+
+//Link the sidebar links to the section and highlight the link of the corresponding section showing
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
-  const header = document.querySelector("header");
-  const topNavBar = document.querySelector("#topbar");
-  const heroImage = document.querySelector(".block-hero-img img");
-  const sidebar = document.querySelector("#sidebar");
   const menuSidebar = {
     hero: document.querySelector(".home"),
     projects: document.querySelector(".projects"),
@@ -83,6 +81,7 @@ document.addEventListener("scroll", function () {
     goToTopBtn.style.display = "none";
   }
 });
+
 // Scroll to the top
 const backToTopButton = document.querySelector(".goTop");
 backToTopButton.addEventListener("click", () => {

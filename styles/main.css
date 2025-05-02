@@ -1,9 +1,9 @@
 :root {
   --default-font: "poppins", Verdana, Tahoma, sans-serif;
   --text-clr: #1a1a1a;
-  --tertiary-clr: #ffffff;
   --primary-clr: #f3f3f3;
   --secondary-clr: #fdfdfd;
+  --tertiary-clr: #ffffff;
 }
 body.dark-mode {
   --text-clr: #fdfdfd;
@@ -85,11 +85,6 @@ svg {
 input::caret {
   color: var(--accent-clr);
 }
-/* .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-} */
 .social-links a svg {
   transition: 0.3s ease-in-out;
   width: 2.5rem;

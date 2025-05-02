@@ -1,18 +1,3 @@
-@keyframes lineToCenter {
-  0% {
-    opacity: 0;
-    filter: blur(50px);
-  }
-  80% {
-    opacity: 0;
-    filter: blur(10px);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translate(30%, 30%);
-  }
-}
 @keyframes bouncing {
   0% {
     opacity: 0.7;
@@ -29,7 +14,6 @@
 }
 @keyframes fadeInTop {
   0% {
-    opacity: 0;
     transform: translateY(100px);
   }
   100% {
@@ -39,7 +23,6 @@
 }
 @keyframes fadeInBottom {
   0% {
-    opacity: 0;
     transform: translateY(-100px);
   }
   100% {
@@ -49,7 +32,6 @@
 }
 @keyframes fadeInLeft {
   0% {
-    opacity: 0;
     transform: translateX(100px);
   }
   100% {
@@ -59,7 +41,6 @@
 }
 @keyframes fadeInRight {
   0% {
-    opacity: 0;
     transform: translateX(-100px);
   }
   100% {
@@ -69,7 +50,6 @@
 }
 @keyframes heroImageAnimation {
   0% {
-    opacity: 0;
     transform: translateY(100px);
     box-shadow: 0rem 0rem 0px var(--accent-clr);
   }
@@ -81,22 +61,11 @@
 }
 @keyframes heroShapeAnimation {
   0% {
-    opacity: 0;
     transform: translate(0, 0);
   }
   100% {
     opacity: 1;
     transform: translate(-1.5rem, -3rem);
-  }
-}
-@keyframes growVanish {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(5);
   }
 }
 

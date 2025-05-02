@@ -30,7 +30,8 @@
   width: auto;
 }
 .block-info .block-map {
-  height: 44%;
+  height: 47%;
+  margin-bottom: 0;
 }
 .info-row:hover {
   background-color: var(--primary-clr);
