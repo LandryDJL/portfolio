@@ -51,6 +51,7 @@ section {
   padding: 0 50px 5rem 50px;
 }
 .section-title {
+  opacity: 0;
   font-weight: 900;
   font-size: 2rem;
 }
@@ -92,6 +93,9 @@ input::caret {
 .social-links a:hover svg {
   scale: 1.1;
   fill: var(--accent-clr);
+}
+.hidden {
+  display: none;
 }
 /* Screens */
 @media (max-width: 800px) {

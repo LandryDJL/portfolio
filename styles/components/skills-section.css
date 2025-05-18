@@ -9,92 +9,83 @@
   gap: 1.5rem;
   width: 100%;
 }
-
 .skill-title {
+  opacity: 0;
   margin-bottom: 1rem;
 }
 .skill {
+  overflow: 0;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
   border: 1px solid var(--primary-clr);
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
+  padding: 1rem;
 }
 .skill img {
+  opacity: 0;
   width: 3rem;
   grid-area: 1/1/3/2;
   margin-right: 0.5rem;
 }
 .skill .skill-name {
+  opacity: 0;
   grid-area: 1/2/2/3;
 }
 .skill .bar {
+  opacity: 0;
   width: 100%;
   height: 20px;
   background-color: var(--primary-clr);
   display: flex;
   border: 1px solid var(--accent-clr);
+  animation-delay: 0.5s;
+  overflow: hidden;
+}
+.skill .bar .filler {
+  transition: 0.5s linear forwards;
+  animation-delay: 0.8s;
 }
 .skill .bar .html-filler {
-  width: 90%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .css-filler {
-  width: 80%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .js-filler {
-  width: 80%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .react-filler {
-  width: 70%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .bootstrap-filler {
-  width: 90%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .wordpress-filler {
-  width: 90%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .illustrator-filler {
-  width: 80%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .photoshop-filler {
-  width: 70%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);
 }
 .skill .bar .canva-filler {
-  width: 90%;
-  height: 20px;
   background-color: var(--accent-clr);
   text-align: center;
   color: var(--tertiary-clr);

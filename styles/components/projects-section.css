@@ -10,7 +10,7 @@
 .filters {
   display: flex;
   gap: 2rem;
-  align-items: start;
+  align-items: center;
   justify-content: left;
   margin-bottom: 2rem;
 }
@@ -18,12 +18,20 @@
   display: flex;
   gap: 1rem;
 }
-.dropdown {
+.categories label,
+.categories label input {
+  cursor: pointer;
+}
+.categories-selector {
   width: auto;
   overflow: hidden;
   transition: 0.3s ease-in-out;
 }
+.categories-selector select {
+  cursor: pointer;
+}
 #selector {
+  background-size: 1em;
   font-size: 1.2rem;
   padding: 0.5rem 1rem;
   width: 100%;
@@ -31,20 +39,21 @@
   border-left: none;
   border-right: none;
   border-bottom: 1px solid var(--accent-clr);
+  background-color: var(--secondary-clr);
+  color: var(--text-clr);
 }
+
 .projects-grid {
   width: min(1000px, 100%);
   margin: 0 auto;
-  columns: 3 200px;
+  columns: 4 100px;
   border-bottom: 1px solid var(--accent-clr);
-  overflow: auto;
-}
-a:hover {
-  border: 1px solid var(--accent-clr);
+  overflow: hidden;
 }
 a:hover img {
   scale: 1.1;
 }
+
 /* ============================= Tablet screens ============================= */
 @media (max-width: 800px) {
   .projects-container {

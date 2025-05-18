@@ -13,7 +13,7 @@
   display: inline-block;
   position: relative;
   top: 1rem;
-  right: 1rem;
+  right: 0;
 }
 .block-settings > button {
   background-color: var(--secondary-clr);

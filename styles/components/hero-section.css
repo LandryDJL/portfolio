@@ -22,7 +22,7 @@
   margin: 2rem;
 }
 .block-hero-img img {
-  /* opacity: 0; */
+  opacity: 0;
   grid-area: 1/1/2/2;
   width: 150px;
   border: 5px solid var(--accent-clr);
@@ -30,6 +30,7 @@
   z-index: 2;
 }
 .block-hero-img .outlined {
+  opacity: 0;
   grid-area: 1/1/2/2;
   width: 150px;
   height: 170px;
@@ -45,10 +46,18 @@
   gap: 0.5rem;
   margin-left: 1rem;
 }
+.block-info-hero .block-name {
+  opacity: 0;
+  animation-delay: 1s;
+}
 .block-info-hero .block-profession {
+  opacity: 0;
   color: var(--accent-clr);
+  animation-delay: 1.1s;
 }
 .block-info-hero .block-description {
+  opacity: 0;
+  animation-delay: 1.2s;
   max-width: 70ch;
   margin: 0.3rem;
 }
@@ -60,6 +69,8 @@
   gap: 1rem;
 }
 .block-info-hero .block-btn a {
+  opacity: 0;
+  animation-delay: 1.4s;
   display: flex;
   align-items: center;
   border: 1px solid var(--accent-clr);
@@ -82,6 +93,8 @@
   animation: gorwVanish 1s linear forwards;
 }
 .block-info-hero .block-btn .contact-btn {
+  opacity: 0;
+  animation-delay: 1.5s;
   font-weight: 800;
   background-color: var(--accent-clr);
   color: var(--primary-clr);

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles/components/skills-section.css" />
     <link rel="stylesheet" href="styles/components/contact-section.css" />
     <link rel="stylesheet" href="styles/components/navigation.css" />
+    <link rel="stylesheet" href="styles/components/animation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +19,11 @@
       rel="stylesheet"
     />
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/hero.js" defer></script>
+    <script src="scripts/projects.js" defer></script>
+    <script src="scripts/skills.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
     <title>Portfolio - Fr</title>
   </head>
   <body>
@@ -289,8 +295,8 @@
               <h1>Landry Dally</h1>
             </div>
             <div class="block-profession">
-              <em>Développeur Web</em> | <em>Designer Web</em> |
-              <em>Infographe</em>
+              <em>&lt Développeur Web</em> / <em>Designer Web</em> /
+              <em>Infographe &gt</em>
             </div>
             <div class="block-description">
               Aspirant développeur web et Designer Web, bilingue(Anglais,
@@ -366,60 +372,24 @@
             </p>
           </div>
           <div class="filters block">
-            <div class="dropdown">
               <div class="categories-selector">
                 <select name="selector" id="selector">
                   <option value="0">Tous les Projets</option>
                   <option value="1">Projets d'Infographie</option>
-                  <option value="2">
-                    Projets de Developpement Web / Design Web
-                  </option>
+                  <option value="2">Projets de Developpement Web</option>
                 </select>
               </div>
-            </div>
-            <div class="categories">
-              <label for="school"
-                ><input type="checkbox" id="school" /> Ecole</label
-              >
-              <label for="self"
-                ><input type="checkbox" id="self" /> personnels</label
-              >
-              <label for="friends"
-                ><input type="checkbox" id="friends" /> Amis</label
-              >
-            </div>
+          </div>
           </div>
           <div class="projects-grid block">
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
-            <a href="#" class="project-card">
-              <img src="" alt="" />
-              <div class="title-project"></div>
-              <div class="description-project"></div>
-            </a>
+            <div id="modal-slideshow" class="modal">
+              <span class="close">&times;</span>
+              <div class="slider-container">
+                <img id="slider-img" src="" alt="Project image" />
+                <button id="prev-slide">&#10094;</button>
+                <button id="next-slide">&#10095;</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -436,35 +406,35 @@
               <div class="WB skill">
                 <img src="assets/images/html-5.svg" alt="Html icon" />
                 <span class="skill-name">Html 5</span>
-                <span class="bar"><span class="html-filler">90%</span></span>
+                <span class="bar"><span class="html-filler filler"></span></span>
               </div>
               <div class="WB skill">
                 <img src="assets/images/css-3.svg" alt="CSS icon" />
                 <span class="skill-name">CSS 3</span>
-                <span class="bar"><span class="css-filler">80%</span></span>
+                <span class="bar"><span class="css-filler filler"></span></span>
               </div>
               <div class="WB skill">
                 <img src="assets/images/bootstrap.svg" alt="Bootstrap icon" />
                 <span class="skill-name">Bootstrap</span>
                 <span class="bar"
-                  ><span class="bootstrap-filler">70%</span></span
+                  ><span class="bootstrap-filler filler"></span></span
                 >
               </div>
               <div class="WB skill">
                 <img src="assets/images/javascript.svg" alt="JS icon" />
                 <span class="skill-name">JavaScript</span>
-                <span class="bar"><span class="js-filler">80%</span></span>
+                <span class="bar"><span class="js-filler filler"></span></span>
               </div>
               <div class="WB skill">
                 <img src="assets/images/react.svg" alt="React icon" />
                 <span class="skill-name">React</span>
-                <span class="bar"><span class="react-filler">70%</span></span>
+                <span class="bar"><span class="react-filler filler"></span></span>
               </div>
               <div class="WB skill">
                 <img src="assets/images/wordpress.svg" alt="Wordpress icon" />
                 <span class="skill-name">Wordpress</span>
                 <span class="bar"
-                  ><span class="wordpress-filler">70%</span></span
+                  ><span class="wordpress-filler filler"></span></span
                 >
               </div>
             </div>
@@ -479,20 +449,20 @@
                 />
                 <span class="skill-name">Adobe Illustrator</span>
                 <span class="bar"
-                  ><span class="illustrator-filler">80%</span></span
+                  ><span class="illustrator-filler filler"></span></span
                 >
               </div>
               <div class="GD skill">
                 <img src="assets/images/photoshop.svg" alt="Photoshop icon" />
                 <span class="skill-name">Adobe Photoshop</span>
                 <span class="bar"
-                  ><span class="photoshop-filler">70%</span></span
+                  ><span class="photoshop-filler filler"></span></span
                 >
               </div>
               <div class="GD skill">
                 <img src="assets/images/canvaBlue.svg" alt="Canva icon" />
                 <span class="skill-name">Canva</span>
-                <span class="bar"><span class="canva-filler">90%</span></span>
+                <span class="bar"><span class="canva-filler filler"></span></span>
               </div>
             </div>
           </div>
@@ -505,121 +475,127 @@
         <div class="contact-container">
           <p>Il est très <span class="easy">facile</span> de me contacter !</p>
           <div class="block-info">
-            <div class="info-row adress">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#1a1a1a"
-              >
-                <path
-                  d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
-                />
-              </svg>
-              <p>Abidjan, Cote d'Ivoire</p>
-            </div>
-            <div class="info-row number">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#1a1a1a"
-              >
-                <path
-                  d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"
-                />
-              </svg>
-              <p>+225 0707075539</p>
-            </div>
-            <div class="info-row email">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24px"
-                viewBox="0 -960 960 960"
-                width="24px"
-                fill="#1a1a1a"
-              >
-                <path
-                  d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
-                />
-              </svg>
-              <p>landrydallydjl@gmail.com</p>
-            </div>
-            <div class="info-row social-links">
-              <a
-                href="https://github.com/LandryDJL"
-                target="_blank"
-                title="GitHub"
-              >
+            <div class="info-container">
+              <div class="info-row adress">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 16 16"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#1a1a1a"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z"
-                    clip-rule="evenodd"
+                    d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"
                   />
                 </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/landry-dally"
-                target="_blank"
-                title="LinkedIn"
-              >
+                <p>Abidjan, Cote d'Ivoire</p>
+              </div>
+              <div class="info-row number">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xml:space="preserve"
-                  width="30"
-                  height="30"
-                  viewBox="-143 145 512 512"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#1a1a1a"
                 >
                   <path
-                    d="M113 145c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zM41.4 508.1H-8.5V348.4h49.9v159.7zM15.1 328.4h-.4c-18.1 0-29.8-12.2-29.8-27.7 0-15.8 12.1-27.7 30.5-27.7s29.7 11.9 30.1 27.7c.1 15.4-11.6 27.7-30.4 27.7zM241 508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4-14.9 0-23.2 10-27 19.6-1.4 3.4-1.2 8.2-1.2 13.1v86.3H71.8s.7-146.4 0-159.7h56.1v25.1c3.3-11 21.2-26.6 49.8-26.6 35.5 0 63.3 23 63.3 72.4v88.8z"
+                    d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v720q0 33-23.5 56.5T680-40H280Zm0-200v120h400v-120H280Zm200 100q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM280-320h400v-400H280v400Zm0-480h400v-40H280v40Zm0 560v120-120Zm0-560v-40 40Z"
                   />
                 </svg>
-              </a>
-              <a
-                href="https://wa.me/+2250707075539?text=urlencodedtext"
-                target="_blank"
-                title="WhatsApp"
-              >
+                <p>+225 0707075539</p>
+              </div>
+              <div class="info-row email">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  xml:space="preserve"
-                  width="30"
-                  height="30"
-                  viewBox="0 0 32 32"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#1a1a1a"
                 >
                   <path
-                    d="M17 0C8.7 0 2 6.7 2 15c0 3.4 1.1 6.6 3.2 9.2l-2.1 6.4c-.1.4 0 .8.3 1.1.1.2.4.3.6.3.1 0 .3 0 .4-.1l6.9-3.1c1.8.8 3.7 1.2 5.7 1.2 8.3 0 15-6.7 15-15S25.3 0 17 0zm8.7 20.5c-.4 1.2-1.9 2.2-3.2 2.4-.3.1-.6.1-1 .1-.8 0-2-.2-4.1-1.1-2.4-1-4.8-3.1-6.7-5.8V16c-.6-.9-1.7-2.6-1.7-4.4 0-2.2 1.1-3.3 1.5-3.8.5-.5 1.2-.8 2-.8h.5c.7 0 1.2.2 1.7 1.2l.4.8c.3.8.7 1.7.8 1.8.3.6.3 1.1 0 1.6-.1.3-.3.5-.5.7-.1.2-.2.3-.3.3l-.2.2c.3.5.9 1.4 1.7 2.1 1.2 1.1 2.1 1.4 2.6 1.6.2-.2.4-.6.7-.9l.1-.2c.5-.7 1.3-.9 2.1-.6.4.2 2.6 1.2 2.6 1.2l.2.1c.3.2.7.3.9.7.4.9.1 2.2-.1 2.9z"
+                    d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480v58q0 59-40.5 100.5T740-280q-35 0-66-15t-52-43q-29 29-65.5 43.5T480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480v58q0 26 17 44t43 18q26 0 43-18t17-44v-58q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93h200v80H480Zm0-280q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z"
                   />
                 </svg>
-              </a>
+                <p>landrydallydjl@gmail.com</p>
+              </div>
+              <div class="info-row social-links">
+                <a
+                  href="https://github.com/LandryDJL"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.976 0A7.977 7.977 0 0 0 0 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 0 1 .832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0 0 16 7.976C15.951 3.572 12.38 0 7.976 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/landry-dally"
+                  target="_blank"
+                  title="LinkedIn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    width="30"
+                    height="30"
+                    viewBox="-143 145 512 512"
+                  >
+                    <path
+                      d="M113 145c-141.4 0-256 114.6-256 256s114.6 256 256 256 256-114.6 256-256-114.6-256-256-256zM41.4 508.1H-8.5V348.4h49.9v159.7zM15.1 328.4h-.4c-18.1 0-29.8-12.2-29.8-27.7 0-15.8 12.1-27.7 30.5-27.7s29.7 11.9 30.1 27.7c.1 15.4-11.6 27.7-30.4 27.7zM241 508.1h-56.6v-82.6c0-21.6-8.8-36.4-28.3-36.4-14.9 0-23.2 10-27 19.6-1.4 3.4-1.2 8.2-1.2 13.1v86.3H71.8s.7-146.4 0-159.7h56.1v25.1c3.3-11 21.2-26.6 49.8-26.6 35.5 0 63.3 23 63.3 72.4v88.8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/+2250707075539?text=urlencodedtext"
+                  target="_blank"
+                  title="WhatsApp"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xml:space="preserve"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 32 32"
+                  >
+                    <path
+                      d="M17 0C8.7 0 2 6.7 2 15c0 3.4 1.1 6.6 3.2 9.2l-2.1 6.4c-.1.4 0 .8.3 1.1.1.2.4.3.6.3.1 0 .3 0 .4-.1l6.9-3.1c1.8.8 3.7 1.2 5.7 1.2 8.3 0 15-6.7 15-15S25.3 0 17 0zm8.7 20.5c-.4 1.2-1.9 2.2-3.2 2.4-.3.1-.6.1-1 .1-.8 0-2-.2-4.1-1.1-2.4-1-4.8-3.1-6.7-5.8V16c-.6-.9-1.7-2.6-1.7-4.4 0-2.2 1.1-3.3 1.5-3.8.5-.5 1.2-.8 2-.8h.5c.7 0 1.2.2 1.7 1.2l.4.8c.3.8.7 1.7.8 1.8.3.6.3 1.1 0 1.6-.1.3-.3.5-.5.7-.1.2-.2.3-.3.3l-.2.2c.3.5.9 1.4 1.7 2.1 1.2 1.1 2.1 1.4 2.6 1.6.2-.2.4-.6.7-.9l.1-.2c.5-.7 1.3-.9 2.1-.6.4.2 2.6 1.2 2.6 1.2l.2.1c.3.2.7.3.9.7.4.9.1 2.2-.1 2.9z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="info-row square"><div class="inner-square"></div></div>
             </div>
-            <div class=" info-row block-map"></div>
           </div>
           <div class="block-form">
-            <form action="#">
-              <p>Envoyez-moi un Email!</p>
-              <div class="row">
-                <label for="name">Nom</label>
-                <input type="text" id="name" />
+            <form action="https://formspree.io/f/xovdvgkn" method="POST">
+              <p>Message me!</p>
+              <div class="row name">
+                <label for="name">Name</label>
+                <input type="text" id="name" required="required" />
               </div>
-              <div class="row">
-                <label for="email">Adresse Email</label>
-                <input type="text" id="email" />
+              <div class="row email">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" required="required" />
               </div>
-              <div class="row">
+              <div class="row message">
                 <label for="message">Message</label>
-                <textarea name="message" id="message"></textarea>
+                <textarea
+                  name="message"
+                  id="message"
+                  required="required"
+                ></textarea>
               </div>
               <button type="submit" class="submit-btn">
-                <span class="text-btn">Evoyez votre message</span>
+                <span class="text-btn">Send your message</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"

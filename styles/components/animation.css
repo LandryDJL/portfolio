@@ -12,6 +12,28 @@
     transform: translateY(0);
   }
 }
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    scale: 0.5;
+  }
+  80% {
+    opacity: 1;
+    scale: 1.2;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeInTop {
   0% {
     transform: translateY(100px);
@@ -53,37 +75,63 @@
     transform: translateY(100px);
     box-shadow: 0rem 0rem 0px var(--accent-clr);
   }
+  70% {
+    opacity: 1;
+    transform: translateY(0px);
+    box-shadow: 0rem 0rem 0px var(--accent-clr);
+  }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    box-shadow: -2rem 2rem 1px var(--accent-clr);
+    box-shadow: -3rem 1rem 1px var(--accent-clr);
   }
 }
 @keyframes heroShapeAnimation {
   0% {
+    scale: 0.5;
+    transform: translate(0, 0);
+  }
+  70% {
+    scale: 0.5;
+    opacity: 0;
     transform: translate(0, 0);
   }
   100% {
+    scale: 1;
     opacity: 1;
-    transform: translate(-1.5rem, -3rem);
+    transform: translate(1rem, -0.3rem);
   }
 }
 
+.fadeIn {
+  transition: 0.5s ease-in-out;
+  animation: fadeIn 0.5s linear forwards;
+}
+.fadeInBounce {
+  transition: 0.5s ease-in-out;
+  animation: fadeInBounce 0.5s linear forwards;
+}
 .fadeInTop {
+  transition: 0.5s ease-in-out;
   animation: fadeInTop 0.5s linear forwards;
 }
 .fadeInBottom {
+  transition: 0.5s ease-in-out;
   animation: fadeInBottom 0.5s linear forwards;
 }
 .fadeInLeft {
+  transition: 0.5s ease-in-out;
   animation: fadeInLeft 0.5s linear forwards;
 }
 .fadeInRight {
+  transition: 0.5s ease-in-out;
   animation: fadeInRight 0.5s linear forwards;
 }
 .heroImageAnimation {
-  animation: heroImageAnimation 0.5s linear forwards;
+  transition: 1s ease-in-out;
+  animation: heroImageAnimation 1s linear forwards;
 }
 .heroShapeAnimation {
-  animation: heroShapeAnimation 0.5s linear forwards;
+  transition: 1s ease-in-out;
+  animation: heroShapeAnimation 1s linear forwards;
 }
