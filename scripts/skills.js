@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (entry.target.id === "skills") {
           skillTitles.forEach((skillTitle) => {
             skillTitle.classList.add("fadeInTop");
-            skillTitle.style.animationDelay = "1s";
+            skillTitle.style.animationDelay = "0.7s";
             const skillBlocks = document.querySelectorAll(".skill");
             const skillImgs = document.querySelectorAll(".skill img");
             const skillNames = document.querySelectorAll(".skill-name");
@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
               if (skillBlock) {
                 skillImgs.forEach((skillImg) => {
                   skillImg.classList.add("fadeInLeft");
-                  skillImg.style.animationDelay = "1.5s";
+                  skillImg.style.animationDelay = "1s";
                 });
                 skillNames.forEach((skillName) => {
                   skillName.classList.add("fadeInLeft");
-                  skillName.style.animationDelay = "1.7s";
+                  skillName.style.animationDelay = "1.2s";
                 });
                 skillBars.forEach((skillBar) => {
                   skillBar.classList.add("fadeIn");
