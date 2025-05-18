@@ -14,7 +14,7 @@
   margin-bottom: 1rem;
 }
 .skill {
-  overflow: 0;
+  overflow: hidden;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0.5rem;
