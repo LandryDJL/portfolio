@@ -294,60 +294,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   modal.style.display = "none";
 
-  // const slideTitle = document.createElement("div");
-  // slideTitle.setAttribute("class", "slide-title");
-  // slideTitle.innerHTML = project.title;
-  // slideTitle.style.position = "absolute";
-  // slideTitle.style.top = "10px";
-  // slideTitle.style.left = "10px";
-  // slideTitle.style.color = "#f3f3f3";
-  // slideTitle.style.fontSize = "2rem";
-  // slideTitle.style.zIndex = "2";
-  // slideTitle.style.textAlign = "left";
-  // slideTitle.style.padding = "0.5rem";
-  // slideTitle.style.backgroundColor = "rgba(26,26,26,0.5)";
-  // slideTitle.style.borderRadius = "5px";
-  // slideTitle.style.width = "fit-content";
-  // slideTitle.style.transition = "0.5s ease-in-out";
-  // slideTitle.style.opacity = "0.8";
-  // slidesContainer.appendChild(slideTitle);
-
-  // const slideDescription = document.createElement("div");
-  // slideDescription.setAttribute("class", "slide-description");
-  // slideDescription.innerHTML = project.description;
-  // slideDescription.style.position = "absolute";
-  // slideDescription.style.bottom = "10px";
-  // slideDescription.style.left = "10px";
-  // slideDescription.style.color = "#f3f3f3";
-  // slideDescription.style.fontSize = "1.5rem";
-  // slideDescription.style.zIndex = "2";
-  // slideDescription.style.textAlign = "left";
-  // slideDescription.style.padding = "0.5rem";
-  // slideDescription.style.backgroundColor = "rgba(26,26,26,0.5)";
-  // slideDescription.style.borderRadius = "5px";
-  // slideDescription.style.width = "fit-content";
-  // slideDescription.style.transition = "0.5s ease-in-out";
-  // slideDescription.style.opacity = "0.8";
-  // slidesContainer.appendChild(slideDescription);
-
-  // const slideImgIndex = document.createElement("div");
-  // slideImgIndex.setAttribute("class", "slide-index");
-  // slideImgIndex.innerHTML = `${index + 1} / ${projects.length}`;
-  // slideImgIndex.style.position = "absolute";
-  // slideImgIndex.style.bottom = "10px";
-  // slideImgIndex.style.right = "10px";
-  // slideImgIndex.style.color = "#f3f3f3";
-  // slideImgIndex.style.fontSize = "1.5rem";
-  // slideImgIndex.style.zIndex = "2";
-  // slideImgIndex.style.textAlign = "right";
-  // slideImgIndex.style.padding = "0.5rem";
-  // slideImgIndex.style.backgroundColor = "rgba(26,26,26,0.5)";
-  // slideImgIndex.style.borderRadius = "5px";
-  // slideImgIndex.style.width = "100%";
-  // slideImgIndex.style.transition = "0.5s ease-in-out";
-  // slideImgIndex.style.opacity = "0.8";
-  // slidesContainer.appendChild(slideImgIndex);
-
   function createProjectCard(projectsFiltered) {
     projectsBlockContainer.innerHTML = "";
 
@@ -358,8 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const detailProjectCardContainer = document.createElement("div");
       const titleProjectCard = document.createElement("div");
       const descriptionProjectCard = document.createElement("div");
-
-      let currentSlide = 0;
 
       card.setAttribute("href", "#");
       card.setAttribute("class", `${project.cardClass}`);
@@ -428,7 +372,6 @@ document.addEventListener("DOMContentLoaded", () => {
       card.addEventListener("click", (event) => {
         event.preventDefault();
         showModal(index);
-        console.log(`Clicked on project: ${project.title}`);
       });
 
       function callBackFunction(entries) {
@@ -469,6 +412,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesContainer.innerHTML = "";
     currentSlide = startIndex;
 
+    // Generate and add the images to the slider in the modal. Add also the title, description and the index as a counter
     projects.forEach((project, index) => {
       const slideImg = document.createElement("img");
       slideImg.setAttribute("src", project.imageSource);
@@ -485,21 +429,77 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesContainer.appendChild(slideImg);
       slideImg.addEventListener("click", () => {
         if (project.link !== "#") {
+          slideImg.style.cursor = "pointer";
           window.open(project.link, "_blank");
         }
       });
+
+      const slideTitle = document.createElement("div");
+      const slideDescription = document.createElement("div");
+      const slideIndex = document.createElement("div");
+      const slideDetailContainer = document.createElement("div");
+
+      slideTitle.setAttribute("class", "slide-title");
+      slideDescription.setAttribute("class", "slide-description");
+      slideIndex.setAttribute("class", "slide-index");
+      slideDetailContainer.setAttribute("class", "slide-detail-container");
+
+      slideTitle.innerHTML = projects[index].title;
+      slideDescription.innerHTML = projects[index].description;
+      slideIndex.innerHTML = `${index + 1} / ${projects.length}`;
+
+      slideIndex.style.position = "absolute";
+      slideIndex.style.top = "1rem";
+      slideIndex.style.left = "50%";
+      slideIndex.style.transform = "translateX(-50%)";
+      slideIndex.style.zIndex = "1000";
+      slideIndex.style.userSelect = "none";
+
+      slideDetailContainer.style.display = "none";
+      slideDetailContainer.style.position = "absolute";
+      slideDetailContainer.style.bottom = "0";
+      slideDetailContainer.style.left = "50%";
+      slideDetailContainer.style.width = "100%";
+      slideDetailContainer.style.height = "auto";
+      slideDetailContainer.style.transform = "translateX(-50%)";
+      slideDetailContainer.style.backgroundColor = "#000000e6";
+      slideDetailContainer.style.padding = "2rem";
+      slideDetailContainer.style.textAlign = "center";
+      slideDetailContainer.style.zIndex = "1000";
+      slideDetailContainer.style.userSelect = "none";
+      slideDetailContainer.style.cursor = "pointer";
+      slideDetailContainer.style.transition = "0.3s ease-in-out";
+      slideTitle.style.marginBottom = "1rem";
+      slideDescription.style.color = "#f3f3f3";
+      slideDescription.style.fontStyle = "italic";
+      slideDescription.style.width = "80%";
+      slideDescription.style.margin = "0 auto";
+
+      slideDetailContainer.appendChild(slideTitle);
+      slideDetailContainer.appendChild(slideDescription);
+      slidesContainer.appendChild(slideDetailContainer);
+      slidesContainer.appendChild(slideIndex);
+
+      slideIndex.style.display = index === startIndex ? "block" : "none";
+      slideTitle.style.display = index === startIndex ? "block" : "none";
+      slideDescription.style.display = index === startIndex ? "block" : "none";
+      slideDetailContainer.style.display =
+        index === startIndex ? "block" : "none";
+
+      slideImg.addEventListener("mouseout", () => {
+        slideIndex.style.display = "none";
+        slideDescription.style.display = "none";
+        slideDetailContainer.style.display = "none";
+        slideTitle.style.display = "none";
+      });
+      slideImg.addEventListener("mouseover", () => {
+        slideIndex.style.display = "block";
+        slideDescription.style.display = "block";
+        slideDetailContainer.style.display = "block";
+        slideTitle.style.display = "block";
+      });
     });
 
-    // projects.forEach((project, index) => {
-    //   const dot = document.createElement("div");
-    //   dot.setAttribute("class", "dot");
-    //   dot.addEventListener("click", () => {
-    //     currentSlide = index;
-    //     showSlide(currentSlide);
-    //   });
-    //   dotsContainer.appendChild(dot);
-    // });
-    // modal.appendChild(dotsContainer);
     modal.style.display = "block";
     showSlide(currentSlide);
 
@@ -511,8 +511,27 @@ document.addEventListener("DOMContentLoaded", () => {
     slides.forEach((slide, indx) => {
       slide.style.display = indx === index ? "block" : "none";
     });
+    const slideTitles = slidesContainer.querySelectorAll(".slide-title");
+    const slideDescriptions =
+      slidesContainer.querySelectorAll(".slide-description");
+    const slideIndexes = slidesContainer.querySelectorAll(".slide-index");
+    const slideDetailContainers = slidesContainer.querySelectorAll(
+      ".slide-detail-container"
+    );
+    slideTitles.forEach((title, indx) => {
+      title.style.display = indx === index ? "block" : "none";
+    });
+    slideDescriptions.forEach((description, indx) => {
+      description.style.display = indx === index ? "block" : "none";
+    });
+    slideIndexes.forEach((slideIndex, indx) => {
+      slideIndex.style.display = indx === index ? "block" : "none";
+    });
+    slideDetailContainers.forEach((slideDetailContainer, indx) => {
+      slideDetailContainer.style.display = indx === index ? "block" : " none";
+    });
   }
-
+  closingModal.style.userSelect = "none";
   if (closingModal) {
     closingModal.addEventListener("click", () => {
       modal.style.display = "none";
