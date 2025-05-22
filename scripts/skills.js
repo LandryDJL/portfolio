@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 skillFillers.forEach((skillfiller) => {
                   if (skillfiller) {
                     skillFillersValues.forEach((skillFillersValue) => {
-                      // Check if the skillfiller's class includes the skill name in the array skillFillersValues
+                      // Check if the skillfiller's class includes the skill name from the array skillFillersValues
                       if (
                         skillfiller.classList.contains(
                           `${skillFillersValue.name}`
@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         skillfiller.style.width = "0%";
                         skillfiller.style.animationDelay = "3s";
                         skillfiller.textContent = "0%";
-                        const duration = target * 20; // total animation duration in ms
-                        const stepTime = target / 5; // ms per step
+                        const duration = target * 20; // total animation duration in milliseconds
+                        const stepTime = target / 5; // milliseconds per step
                         const increment = target / (duration / stepTime);
 
                         const interval = setInterval(() => {

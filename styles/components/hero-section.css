@@ -140,9 +140,6 @@ em {
     max-width: 60ch;
     margin: 0.3rem auto;
   }
-  .block-info-hero .block-btn .contact-btn {
-    opacity: 1;
-  }
   .block-info-hero .block-btn .contact-btn:hover {
     color: var(--text-clr);
   }

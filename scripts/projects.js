@@ -82,21 +82,21 @@ const projects = [
   },
   {
     index: 9,
-    title: "Citation of honour",
+    title: "rare disease GH award citation",
     cardClass: "GD client",
     link: "#",
     description:
       "A citation of honour made for a client, when I was working at Sweet Aroma Print(Ghana).",
-    imageSource: "assets/images/citation Agboado Delight.png",
+    imageSource: "assets/images/rare disease GH award cit..png",
   },
   {
     index: 10,
-    title: "Citation of honour",
+    title: "methodist church citation Citation",
     cardClass: "GD client",
     link: "#",
     description:
       "A citation of honour made for a client, when I was working at Sweet Aroma Print(Ghana).",
-    imageSource: "assets/images/citaions Gh Health.png",
+    imageSource: "assets/images/methodist church citation.png",
   },
   {
     index: 11,
@@ -191,6 +191,15 @@ const projects = [
   },
   {
     index: 21,
+    title: "bakery brands honoring plaque",
+    cardClass: "GD client",
+    link: "#",
+    description:
+      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+    imageSource: "assets/images/bakery brands honoring plaque.png",
+  },
+  {
+    index: 22,
     title: "Invitation card",
     cardClass: "GD client",
     link: "#",
@@ -199,7 +208,7 @@ const projects = [
     imageSource: "assets/images/Invitation card.jpg",
   },
   {
-    index: 22,
+    index: 23,
     title: "Shea Label",
     cardClass: "GD client",
     link: "#",
@@ -208,7 +217,7 @@ const projects = [
     imageSource: "assets/images/shea Label.png",
   },
   {
-    index: 23,
+    index: 24,
     title: "Shea Circle Label",
     cardClass: "GD client",
     link: "#",
@@ -217,7 +226,7 @@ const projects = [
     imageSource: "assets/images/Shea Circle Label.jpg",
   },
   {
-    index: 24,
+    index: 25,
     title: "Shea Thank You Card",
     cardClass: "GD client",
     link: "#",
@@ -226,7 +235,7 @@ const projects = [
     imageSource: "assets/images/Shea thk card.jpg",
   },
   {
-    index: 25,
+    index: 26,
     title: "Freshy",
     cardClass: "GD client",
     link: "#",
@@ -234,33 +243,115 @@ const projects = [
       "Logo made for a friend, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/freshy.png",
   },
+  {
+    index: 27,
+    title: "edu sport program certificate",
+    cardClass: "GD client",
+    link: "#",
+    description:
+      "certificate made for a client, when I was working at Sweet Aroma Print(Ghana).",
+    imageSource: "assets/images/edu sport program certificate.png",
+  },
+  {
+    index: 28,
+    title: "Phyll tombrown label",
+    cardClass: "GD client",
+    link: "#",
+    description:
+      "certificate made for a client, when I was working at Sweet Aroma Print(Ghana).",
+    imageSource: "assets/images/PHYLL TOMBROWN.jpg",
+  },
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  const sectionProjects = document.querySelector("#projects");
-  function callBackFunction(entries) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const sectionTitle = entry.target.querySelector(".section-title");
-        if (sectionTitle) {
-          sectionTitle.classList.add("fadeInTop");
-          sectionTitle.style.opacity = "1";
-        }
+const sectionProjects = document.querySelector("#projects");
+
+function callBackFunction(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const sectionTitle = entry.target.querySelector(".section-title");
+      if (sectionTitle) {
+        sectionTitle.classList.add("fadeInTop");
+        sectionTitle.style.opacity = "1";
       }
-    });
-  }
-  const options = {
-    rootMargin: "0px",
-    threshold: 0.1,
-  };
-  const observer = new IntersectionObserver(callBackFunction, options);
-  observer.observe(sectionProjects);
+    }
+  });
+}
+const options = {
+  rootMargin: "0px",
+  threshold: 0.1,
+};
+const observer = new IntersectionObserver(callBackFunction, options);
+observer.observe(sectionProjects);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectsBlockContainer = document.querySelector(".projects-grid");
+  const slidesContainer = document.getElementById("slidesContainer");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  const closingModal = document.querySelector(".closing-modal");
+  const modal = document.getElementById("sliderModal");
+  let currentSlide = 0;
+
+  modal.style.display = "none";
+
+  // const slideTitle = document.createElement("div");
+  // slideTitle.setAttribute("class", "slide-title");
+  // slideTitle.innerHTML = project.title;
+  // slideTitle.style.position = "absolute";
+  // slideTitle.style.top = "10px";
+  // slideTitle.style.left = "10px";
+  // slideTitle.style.color = "#f3f3f3";
+  // slideTitle.style.fontSize = "2rem";
+  // slideTitle.style.zIndex = "2";
+  // slideTitle.style.textAlign = "left";
+  // slideTitle.style.padding = "0.5rem";
+  // slideTitle.style.backgroundColor = "rgba(26,26,26,0.5)";
+  // slideTitle.style.borderRadius = "5px";
+  // slideTitle.style.width = "fit-content";
+  // slideTitle.style.transition = "0.5s ease-in-out";
+  // slideTitle.style.opacity = "0.8";
+  // slidesContainer.appendChild(slideTitle);
+
+  // const slideDescription = document.createElement("div");
+  // slideDescription.setAttribute("class", "slide-description");
+  // slideDescription.innerHTML = project.description;
+  // slideDescription.style.position = "absolute";
+  // slideDescription.style.bottom = "10px";
+  // slideDescription.style.left = "10px";
+  // slideDescription.style.color = "#f3f3f3";
+  // slideDescription.style.fontSize = "1.5rem";
+  // slideDescription.style.zIndex = "2";
+  // slideDescription.style.textAlign = "left";
+  // slideDescription.style.padding = "0.5rem";
+  // slideDescription.style.backgroundColor = "rgba(26,26,26,0.5)";
+  // slideDescription.style.borderRadius = "5px";
+  // slideDescription.style.width = "fit-content";
+  // slideDescription.style.transition = "0.5s ease-in-out";
+  // slideDescription.style.opacity = "0.8";
+  // slidesContainer.appendChild(slideDescription);
+
+  // const slideImgIndex = document.createElement("div");
+  // slideImgIndex.setAttribute("class", "slide-index");
+  // slideImgIndex.innerHTML = `${index + 1} / ${projects.length}`;
+  // slideImgIndex.style.position = "absolute";
+  // slideImgIndex.style.bottom = "10px";
+  // slideImgIndex.style.right = "10px";
+  // slideImgIndex.style.color = "#f3f3f3";
+  // slideImgIndex.style.fontSize = "1.5rem";
+  // slideImgIndex.style.zIndex = "2";
+  // slideImgIndex.style.textAlign = "right";
+  // slideImgIndex.style.padding = "0.5rem";
+  // slideImgIndex.style.backgroundColor = "rgba(26,26,26,0.5)";
+  // slideImgIndex.style.borderRadius = "5px";
+  // slideImgIndex.style.width = "100%";
+  // slideImgIndex.style.transition = "0.5s ease-in-out";
+  // slideImgIndex.style.opacity = "0.8";
+  // slidesContainer.appendChild(slideImgIndex);
 
   function createProjectCard(projectsFiltered) {
-    const projectsBlockContainer = document.querySelector(".projects-grid");
     projectsBlockContainer.innerHTML = "";
 
-    projectsFiltered.forEach((project) => {
+    projectsFiltered.forEach((project, index) => {
       const card = document.createElement("a");
       const imgContainer = document.createElement("div");
       const img = document.createElement("img");
@@ -268,8 +359,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const titleProjectCard = document.createElement("div");
       const descriptionProjectCard = document.createElement("div");
 
-      card.setAttribute("href", project.link);
-      card.setAttribute("target", "_blank");
+      let currentSlide = 0;
+
+      card.setAttribute("href", "#");
       card.setAttribute("class", `${project.cardClass}`);
       imgContainer.classList.add("image-project-card");
       img.setAttribute("src", project.imageSource);
@@ -288,6 +380,15 @@ document.addEventListener("DOMContentLoaded", () => {
       card.style.alignItems = "start";
       card.style.padding = "0.5rem";
       card.style.overflow = "hidden";
+
+      card.addEventListener("mouseover", () => {
+        detailProjectCardContainer.style.gridTemplateRows = "-200px";
+        detailProjectCardContainer.style.opacity = "1";
+      });
+      card.addEventListener("mouseout", () => {
+        detailProjectCardContainer.style.opacity = "0";
+        detailProjectCardContainer.style.gridTemplate = "0px";
+      });
 
       img.style.transition = "0.5s ease-in-out";
       img.style.width = "100%";
@@ -309,18 +410,6 @@ document.addEventListener("DOMContentLoaded", () => {
       titleProjectCard.style.color = "#f3f3f3";
       titleProjectCard.style.zIndex = "2";
 
-      card.addEventListener("mouseover", () => {
-        detailProjectCardContainer.style.gridTemplateRows = "-200px";
-        detailProjectCardContainer.style.opacity = "1";
-      });
-      card.addEventListener("mouseout", () => {
-        detailProjectCardContainer.style.opacity = "0";
-        detailProjectCardContainer.style.gridTemplate = "0px";
-      });
-      card.addEventListener("click", () => {
-        modalContainer.classList.add("show-modal");
-      });
-
       imgContainer.style.gridArea = "1/1/2/2";
       imgContainer.style.overflow = "hidden";
       imgContainer.style.zIndex = "0";
@@ -335,21 +424,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
       projectsBlockContainer.appendChild(card);
 
-      function callBackFunction1(entries) {
+      // Open the modal when a card is clicked
+      card.addEventListener("click", (event) => {
+        event.preventDefault();
+        showModal(index);
+        console.log(`Clicked on project: ${project.title}`);
+      });
+
+      function callBackFunction(entries) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             card.classList.add("fadeInTop");
-            card.style.opacity = "1";
           }
         });
       }
-      const options1 = {
+
+      const options = {
         rootMargin: "0px",
         threshold: 1,
       };
 
-      const observer1 = new IntersectionObserver(callBackFunction1, options1);
-      observer1.observe(card);
+      const observer = new IntersectionObserver(callBackFunction, options);
+      observer.observe(card);
     });
 
     const selectElement = document.getElementById("selector");
@@ -368,4 +464,66 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   createProjectCard(projects);
+
+  function showModal(startIndex) {
+    slidesContainer.innerHTML = "";
+    currentSlide = startIndex;
+
+    projects.forEach((project, index) => {
+      const slideImg = document.createElement("img");
+      slideImg.setAttribute("src", project.imageSource);
+      slideImg.setAttribute("alt", `image of ${project.title}`);
+      slideImg.setAttribute("loading", "lazy");
+      slideImg.setAttribute("class", "slide");
+
+      slideImg.style.width = "100%";
+      slideImg.style.height = "100%";
+      slideImg.style.objectFit = "contain";
+      slideImg.style.margin = "0 auto";
+      slideImg.style.transition = "0.5s ease-in-out";
+      slideImg.style.display = index === startIndex ? "block" : "none";
+      slidesContainer.appendChild(slideImg);
+      slideImg.addEventListener("click", () => {
+        if (project.link !== "#") {
+          window.open(project.link, "_blank");
+        }
+      });
+    });
+
+    // projects.forEach((project, index) => {
+    //   const dot = document.createElement("div");
+    //   dot.setAttribute("class", "dot");
+    //   dot.addEventListener("click", () => {
+    //     currentSlide = index;
+    //     showSlide(currentSlide);
+    //   });
+    //   dotsContainer.appendChild(dot);
+    // });
+    // modal.appendChild(dotsContainer);
+    modal.style.display = "block";
+    showSlide(currentSlide);
+
+    projectsBlockContainer.appendChild(modal);
+  }
+
+  function showSlide(index) {
+    const slides = slidesContainer.querySelectorAll(".slide");
+    slides.forEach((slide, indx) => {
+      slide.style.display = indx === index ? "block" : "none";
+    });
+  }
+
+  if (closingModal) {
+    closingModal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  }
+  prevBtn.addEventListener("click", () => {
+    currentSlide = (currentSlide - 1 + projects.length) % projects.length;
+    showSlide(currentSlide);
+  });
+  nextBtn.addEventListener("click", () => {
+    currentSlide = (currentSlide + 1) % projects.length;
+    showSlide(currentSlide);
+  });
 });

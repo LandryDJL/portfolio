@@ -46,12 +46,65 @@
 .projects-grid {
   width: min(1000px, 100%);
   margin: 0 auto;
-  columns: 4 100px;
+  columns: 5 100px;
   border-bottom: 1px solid var(--accent-clr);
   overflow: hidden;
 }
 a:hover img {
   scale: 1.1;
+}
+.projects-grid .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: var(--text-clr);
+  overflow: hidden;
+}
+.projects-grid .modal.show-modal {
+  display: block;
+}
+.close-modal:hover,
+.prev-slide:hover,
+.next-slide:hover {
+  background-color: transparent;
+  color: var(--accent-clr);
+}
+.prev-slide,
+.next-slide,
+.closing-modal {
+  font-family: Impact;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #f3f3f3;
+  z-index: 10;
+  position: absolute;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+.closing-modal {
+  top: 1rem;
+  right: 1rem;
+}
+.prev-slide {
+  top: 50%;
+  left: 20px;
+}
+.next-slide {
+  top: 50%;
+  right: 20px;
+}
+.slides-container {
+  width: auto;
+  max-width: 80%;
+  height: 90%;
+  margin: 3rem auto;
 }
 
 /* ============================= Tablet screens ============================= */
