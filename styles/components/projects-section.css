@@ -105,8 +105,8 @@ a:hover img {
   height: 90%;
   margin: 3rem auto;
 }
-.show {
-  display: block;
+.hide {
+  display: none;
 }
 .slide-title {
   color: var(--accent-clr);

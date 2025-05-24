@@ -5,7 +5,7 @@ const projects = [
     cardClass: "WD school",
     link: "https://landrydjl.github.io/WDD-130/wwr/index.html",
     description:
-      "This project was to test our understanding of the course material and our knowledge in building basic website for a rafting company, allowing users to book trips online. Built with HTML and CSS.",
+      "This project was to test our understanding of the course material and our knowledge in building basic website for a rafting company, allowing users to book trips through a contact form. Built with HTML and CSS.",
     imageSource: "assets/images/rafting.jpg",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     cardClass: "WD school",
     link: "https://landrydjl.github.io/cse121b/project.html",
     description:
-      "This project was to test our understanding of the course material and our knowledge in building basic web page and implementing an API, allowing users to convertion between two currencies. Built with HTML, CSS and JavaScript.",
+      "This project was to test our understanding of the course material and our knowledge in building basic web page and implementing an API, allowing users to convert between two currencies. Built with HTML, CSS and JavaScript.",
     imageSource: "assets/images/cur_converter.jpg",
   },
   {
@@ -141,7 +141,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/DANNICE AND EUNICE.jpg",
   },
   {
@@ -150,25 +150,25 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/plaq Rev.png",
   },
   {
     index: 17,
-    title: "Award Plaque design",
+    title: "Glass Award Plaque design",
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/Ministry of Lands and Natural Resources.jpg",
   },
   {
     index: 18,
-    title: "TCP Award Plaque design",
+    title: "Wooden TCP Award Plaque design",
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/TPC.png",
   },
   {
@@ -177,25 +177,25 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/VORSA PLAQUES.jpg",
   },
   {
     index: 20,
-    title: "Home Builders Award Plaque design",
+    title: "Home Builders Award Plaque",
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque to honour the workers of the Home Builders company,made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/Home Builders Plaq.png",
   },
   {
     index: 21,
-    title: "bakery brands honoring plaque",
+    title: "bakery brands honouring plaque",
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Award palque to honour Bakery businesses made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/bakery brands honoring plaque.png",
   },
   {
@@ -204,7 +204,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Invitation cards made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/Invitation card.jpg",
   },
   {
@@ -213,7 +213,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Label made for the SHEA products for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/shea Label.png",
   },
   {
@@ -222,7 +222,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Label made for the SHEA products for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/Shea Circle Label.jpg",
   },
   {
@@ -231,7 +231,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "an award palque for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Thank you card made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/Shea thk card.jpg",
   },
   {
@@ -240,7 +240,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "Logo made for a friend, when I was working at Sweet Aroma Print(Ghana).",
+      "Logo made for a friend for his business of fruit juice selling.",
     imageSource: "assets/images/freshy.png",
   },
   {
@@ -258,7 +258,7 @@ const projects = [
     cardClass: "GD client",
     link: "#",
     description:
-      "certificate made for a client, when I was working at Sweet Aroma Print(Ghana).",
+      "Label for some powder Tombrown in bottle made for a client, when I was working at Sweet Aroma Print(Ghana).",
     imageSource: "assets/images/PHYLL TOMBROWN.jpg",
   },
 ];
@@ -427,10 +427,17 @@ document.addEventListener("DOMContentLoaded", () => {
       slideImg.style.transition = "0.5s ease-in-out";
       slideImg.style.display = index === startIndex ? "block" : "none";
       slidesContainer.appendChild(slideImg);
+      if (project.link !== "#") {
+        slideImg.style.cursor = "pointer";
+      }
       slideImg.addEventListener("click", () => {
         if (project.link !== "#") {
-          slideImg.style.cursor = "pointer";
           window.open(project.link, "_blank");
+        } else {
+          slideIndex.style.display = "block";
+          slideDescription.style.display = "block";
+          slideDetailContainer.style.display = "block";
+          slideTitle.style.display = "block";
         }
       });
 
@@ -486,6 +493,21 @@ document.addEventListener("DOMContentLoaded", () => {
       slideDetailContainer.style.display =
         index === startIndex ? "block" : "none";
 
+      setTimeout(() => {
+        // display the image details for 5 secs
+        if (
+          (slideIndex.style.display = "block") &&
+          (slideDescription.style.display = "block") &&
+          (slideDetailContainer.style.display = "block") &&
+          (slideTitle.style.display = "block")
+        ) {
+          slideIndex.style.display = "none";
+          slideDescription.style.display = "none";
+          slideDetailContainer.style.display = "none";
+          slideTitle.style.display = "none";
+        }
+      }, 5000);
+
       slideImg.addEventListener("mouseout", () => {
         slideIndex.style.display = "none";
         slideDescription.style.display = "none";
@@ -498,6 +520,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slideDetailContainer.style.display = "block";
         slideTitle.style.display = "block";
       });
+      slideImg.addEventListener("click", () => {});
     });
 
     modal.style.display = "block";
