@@ -568,4 +568,21 @@ document.addEventListener("DOMContentLoaded", () => {
     currentSlide = (currentSlide + 1) % projects.length;
     showSlide(currentSlide);
   });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      modal.style.display = "none";
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+      currentSlide = (currentSlide + 1) % projects.length;
+      showSlide(currentSlide);
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      currentSlide = (currentSlide - 1 + projects.length) % projects.length;
+      showSlide(currentSlide);
+    }
+  });
 });
